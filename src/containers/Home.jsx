@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { connect } from "react-redux";
-import Search from "../components/Search";
-import Categories from "../components/Categories";
-import Carousel from "../components/Carousel";
-import CarouselItem from "../components/CarouselItem";
-import useInitialState from "../hooks/useInitialState";
-import "../assets/styles/App.scss";
+import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+import Search from '../components/Search';
+import Categories from '../components/Categories';
+import Carousel from '../components/Carousel';
+import CarouselItem from '../components/CarouselItem';
+import useInitialState from '../hooks/useInitialState';
+import '../assets/styles/App.scss';
 
 const Home = ({ myList, trends, originals }) => {
   return (
@@ -15,7 +15,7 @@ const Home = ({ myList, trends, originals }) => {
         <Categories title="Mi Lista">
           <Carousel>
             {myList.map((item) => (
-              <CarouselItem key={item.id} {...item} />
+              <CarouselItem key={item.id} {...item} isList />
             ))}
           </Carousel>
         </Categories>
