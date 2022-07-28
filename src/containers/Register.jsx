@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { registerRequest } from '../actions';
+import { Link, useNavigate } from 'react-router-dom';
 import '../assets/styles/components/Register.scss';
 
-const Register = () => {
+const Register = (props) => {
+  let navigate = useNavigate();
   const [values, setValues] = useState({
     email: '',
     name: '',
@@ -18,7 +21,8 @@ const Register = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(values);
+    props.registerRequest(values);
+    navigate('/');
   };
 
   return (
@@ -57,4 +61,8 @@ const Register = () => {
   );
 };
 
-export default Register;
+const mapDispatchToProps = {
+  registerRequest,
+};
+
+export default connect(null, mapDispatchToProps)(Register);
