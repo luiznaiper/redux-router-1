@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import CarouselItem from './CarouselItem';
 
 import '../assets/styles/components/Search.scss';
+import '../assets/styles/components/CarouselItem.scss';
 
 const Search = (props) => {
   const [result, setResult] = useState({});
@@ -22,7 +23,7 @@ const Search = (props) => {
   }, [search]);
   return (
     <section className="main">
-      <h2 className="main__title">¿Qué quieres ver hoy?</h2>
+      <h2 className="main__title">What do you wanna see today?</h2>
       <input
         name="search"
         onChange={handleSearch}
