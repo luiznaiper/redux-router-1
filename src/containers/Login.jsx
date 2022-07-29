@@ -29,45 +29,46 @@ const Login = (props) => {
 
   return (
     <>
-    <Header isLogin />
+      <Header isLogin />
       <section className="login">
         <section className="login__container">
-          <h2>Inicia sesión</h2>
+          <h2>Log In</h2>
           <form className="login__container--form" onSubmit={handleSubmit}>
             <input
               name="email"
               className="input"
               type="text"
-              placeholder="Correo"
+              placeholder="Email"
               onChange={handleInput}
             />
             <input
               name="password"
               className="input"
               type="password"
-              placeholder="Contraseña"
+              placeholder="Password"
               onChange={handleInput}
             />
-            <button className="button">Iniciar sesión</button>
+            <button className="button">Log In</button>
             <div className="login__container--remember-me">
               <label>
                 <input type="checkbox" id="cbox1" value="first_checkbox" />
-                Recuérdame
+                Remember Me
               </label>
-              <a href="/">Olvidé mi contraseña</a>
+              <a href="/">Forgot password?</a>
             </div>
           </form>
           <section className="login__container--social-media">
             <div>
-              <img src={googleIcon} /> Inicia sesión con Google
+              <img src={googleIcon} />
+              Login with Google
             </div>
             <div>
-              <img src={twitterIcon} /> Inicia sesión con Twitter
+              <img src={twitterIcon} /> Login with Twitter
             </div>
           </section>
           <p className="login__container--register">
-            No tienes ninguna cuenta
-            <Link to="/register">Regístrate</Link>
+            No account?
+            <Link to="/register"> Register</Link>
           </p>
         </section>
       </section>
